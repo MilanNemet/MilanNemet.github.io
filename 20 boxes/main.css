@@ -15,16 +15,14 @@ body > div {
     max-width: 100vw;
     flex-wrap: wrap
 }
-
-#inner1 {
-}
 #inner2 {
     background-color: coral;
 }
-
+#inner2 > div {
+    background-color: rebeccapurple;
+}
 body {
     flex-direction: row;
     display: flex;
     flex-direction: column;
-    
 }
