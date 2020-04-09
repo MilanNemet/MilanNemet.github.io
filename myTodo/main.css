@@ -1,5 +1,6 @@
 ﻿input {
     margin: 5px;
+    padding: 5px 10px;
 }
 #todoText {
     font-size: 16px;
@@ -8,7 +9,6 @@
 #todoButton {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
-    padding: 10px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 1px 1px 1px 1px #DDD;
