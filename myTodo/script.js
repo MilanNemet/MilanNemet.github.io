@@ -7,8 +7,9 @@ window.onload = function () {
     let buttonReset = this.document.getElementById("todoButtonReset");
     let textBox = this.document.getElementById("todoText");
 
-    textBox.addEventListener("focus", (e) => e.target.className = "active")
-    textBox.addEventListener("focusout", (e) => e.target.className = "inactive")
+    textBox.addEventListener("focus", (e) => e.target.className = "active");
+    textBox.addEventListener("focusout", (e) => e.target.className = "inactive");
+    textBox.addEventListener('keypress', insertNewListItem);
 
     buttonAdd.addEventListener("mousedown", setStyleDown);
     buttonAdd.addEventListener("mouseup", setStyleUpOrOut);
@@ -29,7 +30,14 @@ let setStyleUpOrOut = (e) => {
     e.target.style.backgroundColor = "white";
     e.target.style.boxShadow = "0 0 1px 1px #666";
 }
-let insertNewListItem = () => {
+let insertNewListItem = (e) => {
+
+    let keyCode = e.which || e.keyCode;
+
+    if (keyCode != 13 && e.button != 0) {
+        return;
+    }
+
     let ul = document.getElementById("todoList");
     let input = document.getElementById("todoText");
 
