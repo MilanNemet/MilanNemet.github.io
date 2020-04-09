@@ -2,5 +2,6 @@ ul {
 	list-style-type: '📁 ';
 }
 li {
+	font-size: 2em;
 	margin: 5px;
 }
