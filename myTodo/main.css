@@ -1,1 +1,9 @@
-﻿
+﻿#todoText {
+    box-shadow: 1px 1px 1px 1px #DDD;
+}
+#todoButton{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
