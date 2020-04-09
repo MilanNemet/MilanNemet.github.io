@@ -1,11 +1,18 @@
 console.debug("Starting script...");
 
 window.onload = function () {
-    let button = this.document.getElementById("todoButton");
-    button.addEventListener("mousedown", setStyleDown)
-    button.addEventListener("mouseup", setStyleUpOrOut)
-    button.addEventListener("mouseout", setStyleUpOrOut)
-    button.addEventListener("click", insertNewListItem)
+    let buttonAdd = this.document.getElementById("todoButtonAdd");
+    let buttonReset = this.document.getElementById("todoButtonReset");
+
+    buttonAdd.addEventListener("mousedown", setStyleDown);
+    buttonAdd.addEventListener("mouseup", setStyleUpOrOut);
+    buttonAdd.addEventListener("mouseout", setStyleUpOrOut);
+    buttonAdd.addEventListener("click", insertNewListItem);
+
+    buttonReset.addEventListener("mousedown", setStyleDown);
+    buttonReset.addEventListener("mouseup", setStyleUpOrOut);
+    buttonReset.addEventListener("mouseout", setStyleUpOrOut);
+    buttonReset.addEventListener("click", resetList);
 }
 
 let setStyleDown = (e) => {
@@ -20,9 +27,17 @@ let insertNewListItem = () => {
     let ul = document.getElementById("todoList")
     let input = document.getElementById("todoText");
 
-    let li = document.createElement("li");
-    let textNode = document.createTextNode(input.value)
-    li.appendChild(textNode);
-    ul.appendChild(li);
-    input.value = "";
+    if (input.value.length > 0) {
+        let li = document.createElement("li");
+        let textNode = document.createTextNode(input.value)
+        li.appendChild(textNode);
+        ul.appendChild(li);
+        input.value = "";
+    }
+}
+let resetList = () => {
+    let answer = confirm("All list-items will be deleted permanently!\nDo you want to continue?");
+    if (answer) {
+        document.getElementById("todoList").innerHTML = '';
+    }
 }
