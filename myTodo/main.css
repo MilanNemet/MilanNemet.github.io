@@ -1,10 +1,14 @@
-﻿#todoText {
+﻿input {
+    margin: 5px;
+}
+#todoText {
+    font-size: 16px;
     box-shadow: 1px 1px 1px 1px #DDD;
 }
 #todoButton {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: white;
     padding: 10px;
-    border: 2px solid #DDD;
+    border: 1px solid black;
     border-radius: 5px;
 }
