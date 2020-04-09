@@ -1,8 +1,8 @@
 ul {
-	padding: 10px;
+	margin: 20px;
 	list-style-type: '📁 ';
 }
 li {
-	font-size: 1.5em;
+	font-size: 1.2em;
 	margin: 5px;
 }
