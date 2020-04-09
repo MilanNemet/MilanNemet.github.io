@@ -48,9 +48,7 @@ let insertNewListItem = (e) => {
         input.value = "";
 
         listItems = document.querySelectorAll("#todoList > li");
-        for (var i = 0; i < listItems.length; i++) {
-            listItems[i].addEventListener("click", liClickHandler);
-        }
+        listItems[listItems.length-1].addEventListener("click", liClickHandler);
     }
     else {
         showErrorMsg("There is nothing to add...");
