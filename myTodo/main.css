@@ -15,6 +15,12 @@ input {
 li {
     font-size: 1.5em;
 }
+li::before {
+    content: '\00a0\00a0';
+}
+li::after {
+    content: '\00a0\00a0';
+}
 #todoText {
     /*font-size: 13px;*/
 }
