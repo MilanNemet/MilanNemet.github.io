@@ -35,8 +35,7 @@ let insertNewListItem = () => {
 
     if (input.value.length > 0) {
         let li = document.createElement("li");
-        let textNode = document.createTextNode(input.value);
-        li.appendChild(textNode);
+        li.textContent = input.value;
         ul.appendChild(li);
         input.value = "";
 
