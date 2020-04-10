@@ -1,6 +1,6 @@
 console.debug("Starting script...");
 
-var listItems;
+let listItems;
 
 window.onload = function () {
     let buttonAdd = this.document.getElementById("todoButtonAdd");
