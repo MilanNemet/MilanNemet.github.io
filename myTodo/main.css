@@ -1,16 +1,18 @@
 ﻿div {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 10%;
 }
 .container {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     width: 100%;
     max-width: 800px;
     margin: auto;
+    padding: 5vmin;
     flex-direction: column;
     flex-wrap: nowrap;
 }
-input {
+input, select {
     font-size: 1em;
     margin: 5px;
     padding: 5px 10px;
@@ -24,8 +26,15 @@ input[type=submit] {
     background-color: white;
 }
 
+ul, ol {
+    max-width: 400px;
+    margin: auto;
+    padding: 0 5vw;
+}
 li {
     font-size: 1.5em;
+    position: relative;
+    max-width: 80%;
 }
 li::before {
     content: '\00a0\00a0';
@@ -48,6 +57,7 @@ li::after {
 
 .pagination {
     margin-top: 10px;
+    text-align: center;
 }
 .pagination > span {
     font-size: 2em;
@@ -55,4 +65,14 @@ li::after {
     margin: 0;
     padding: 5px;
     vertical-align: top;
+}
+
+ins {
+    position: absolute;
+    right: -20%;
+    text-decoration: none;
+    display: inline-block;
+}
+ins span {
+    /*margin-left: 5px;*/
 }

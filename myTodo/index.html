@@ -3,16 +3,24 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo list</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
     <div class="container">
         <h1>My Simple TODO list</h1>
         <div>
-            <input type="submit" value="Create new list" id="ButtonNewList">
+                <select id="list_type" name="list_type">
+                    <option value="ul">bullet list</option>
+                    <option value="ol">numbered list</option>
+                </select>
+                <input type="submit" value="Create new list" id="ButtonNewList">
+                <input type="submit" value="Delete list" id="ButtonDeleteList">
         </div>
-        <div>
+        <p style="width: 100%; border-bottom: 1px solid black;"></p>
+        <div style="justify-content: end;">
             <input type="text" placeholder="Add a new todo item..." size="32" autofocus class="active" id="todoText" />
             <input type="submit" value="Add todo" id="todoButtonAdd">
             <input type="submit" value="Reset list" id="todoButtonReset">
@@ -20,16 +28,16 @@
         <p class="error">&nbsp;</p>
 
         <nav class="pagination">
-            <input type="submit" value="<<" id="todoListFirst" disabled>
-            <input type="submit" value="<" id="todoListPrev" disabled>
-            <span>1</span>
-            <input type="submit" value=">" id="todoListNext" disabled>
-            <input type="submit" value=">>" id="todoListLast" disabled>
+            <input type="submit" value="<<" id="todoListFirst" >
+            <input type="submit" value="<" id="todoListPrev" >
+            <span id="indexer">1</span>
+            <input type="submit" value=">" id="todoListNext" >
+            <input type="submit" value=">>" id="todoListLast" >
         </nav>
 
         <h2>Todos:</h2>
-        <main>
-            <ul id="todoList">
+        <main id="listsContainer">
+            <ul class="todoList">
             </ul>
         </main>
 
