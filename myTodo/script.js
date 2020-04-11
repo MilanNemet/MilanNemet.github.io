@@ -3,23 +3,40 @@ console.debug("Starting script...");
 let listItems;
 
 window.onload = function () {
-    let buttonAdd = this.document.getElementById("todoButtonAdd");
-    let buttonReset = this.document.getElementById("todoButtonReset");
+
+    let inputSubmits = this.document.querySelectorAll("input[type=submit]");
+
+    inputSubmits.forEach(
+        item => {
+            item.addEventListener("mousedown", setStyleDown);
+            item.addEventListener("mouseup", setStyleUpOrOut);
+            item.addEventListener("mouseout", setStyleUpOrOut);
+        }
+    );
+
+    //let buttonNewList = this.document.getElementById("ButtonNewList");
+    //let buttonAdd = this.document.getElementById("todoButtonAdd");
+    //let buttonReset = this.document.getElementById("todoButtonReset");
+
+    //buttonNewList.addEventListener("mousedown", setStyleDown);
+    //buttonNewList.addEventListener("mouseup", setStyleUpOrOut);
+    //buttonNewList.addEventListener("mouseout", setStyleUpOrOut);
+
+    //buttonAdd.addEventListener("mousedown", setStyleDown);
+    //buttonAdd.addEventListener("mouseup", setStyleUpOrOut);
+    //buttonAdd.addEventListener("mouseout", setStyleUpOrOut);
+    //buttonAdd.addEventListener("click", insertNewListItem);
+
+    //buttonReset.addEventListener("mousedown", setStyleDown);
+    //buttonReset.addEventListener("mouseup", setStyleUpOrOut);
+    //buttonReset.addEventListener("mouseout", setStyleUpOrOut);
+    //buttonReset.addEventListener("click", resetList);
+
     let textBox = this.document.getElementById("todoText");
 
     textBox.addEventListener("focus", (e) => e.target.className = "active");
     textBox.addEventListener("focusout", (e) => e.target.className = "inactive");
     textBox.addEventListener('keypress', insertNewListItem);
-
-    buttonAdd.addEventListener("mousedown", setStyleDown);
-    buttonAdd.addEventListener("mouseup", setStyleUpOrOut);
-    buttonAdd.addEventListener("mouseout", setStyleUpOrOut);
-    buttonAdd.addEventListener("click", insertNewListItem);
-
-    buttonReset.addEventListener("mousedown", setStyleDown);
-    buttonReset.addEventListener("mouseup", setStyleUpOrOut);
-    buttonReset.addEventListener("mouseout", setStyleUpOrOut);
-    buttonReset.addEventListener("click", resetList);
 }
 
 let setStyleDown = (e) => {
