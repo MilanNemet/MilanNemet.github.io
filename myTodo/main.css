@@ -2,6 +2,11 @@
     display: flex;
     flex-wrap: wrap;
 }
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
 input {
     font-size: 15px;
     margin: 5px;
