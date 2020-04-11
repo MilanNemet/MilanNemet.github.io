@@ -79,35 +79,33 @@ let insertNewListItem = (e) => {
     let todoLists = document.getElementsByClassName("todoList");
     let input = document.getElementById("todoText");
 
-    if (input.value.length < 1) {
-        showErrorMsg("There is nothing to add...");
-        return;
+    if (input.value.length > 0) {
+        let li = document.createElement("li");
+        let textNode = document.createTextNode(input.value);
+        li.appendChild(textNode);
+
+        let ins = document.createElement("ins");
+
+        let bin = document.createElement("span");
+        bin.className = "material-icons";
+        bin.textContent = "delete";
+        bin.addEventListener("click", liClickHandler);
+
+        let tick = document.createElement("span");
+        tick.className = "material-icons";
+        tick.textContent = "check_circle_outline";
+        tick.addEventListener("click", liClickHandler);
+
+        ins.appendChild(bin);
+        ins.appendChild(tick);
+        li.appendChild(ins);
+
+        todoLists[listIndex - 1].appendChild(li);
+        input.value = "";
     }
-    let li = document.createElement("li");
-
-    let textNode = document.createTextNode(input.value);
-    li.appendChild(textNode);
-
-    let ins = document.createElement("ins");
-
-    let bin = document.createElement("span");
-    bin.className = "material-icons";
-    bin.textContent = "delete";
-
-    let tick = document.createElement("span");
-    tick.className = "material-icons";
-    tick.textContent = "check_circle_outline";
-
-    ins.appendChild(bin);
-    ins.appendChild(tick);
-    li.appendChild(ins);
-
-    todoLists[listIndex-1].appendChild(li);
-    input.value = "";
-
-    let listItems = todoLists[listIndex - 1].querySelectorAll("li");
-    let lastListItem = listItems[listItems.length - 1];
-    lastListItem.firstChild.addEventListener("click", liClickHandler);
+    else {
+        showErrorMsg("There is nothing to add...");
+    }
     input.focus();
 }
 let removeListItem = (e) => {
@@ -165,11 +163,20 @@ let showErrorMsg = (str) => {
     setTimeout(function () { error.style.visibility = 'hidden'; }, 4000);
 }
 let liClickHandler = (e) => {
-    let li = e.target;
-    if (li.style.textDecoration != "line-through") {
-        li.style.textDecoration = "line-through";
+    let span = e.target;
+    let li = span.parentNode.parentNode;
+
+    if (span.innerHTML == "delete") {
+        li.remove();
+    }
+    else if (span.innerHTML == "check_circle_outline") {
+        li.style.color = "#BBB";
+        span.innerHTML = "check_circle";
+        span.style.color = "lime";
     }
     else {
-        li.style.textDecoration = "none";
+        li.style.color = "#000";
+        span.innerHTML = "check_circle_outline";
+        span.style.color = "black";
     }
 }

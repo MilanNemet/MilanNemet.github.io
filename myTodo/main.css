@@ -37,10 +37,13 @@ li {
     max-width: 80%;
 }
 li::before {
-    content: '\00a0\00a0';
+    content: '\00a0';
 }
 li::after {
-    content: '\00a0\00a0';
+    content: '\00a0';
+}
+li > ins {
+    color: black;
 }
 
 .error {
@@ -74,5 +77,6 @@ ins {
     display: inline-block;
 }
 ins span {
-    /*margin-left: 5px;*/
+    margin-left: 5px;
+    cursor: pointer;
 }
