@@ -40,9 +40,12 @@ let insertNewList = () => {
     let todoLists;
     let indexerElement = document.getElementById("indexer");
     let listsContainer = document.getElementById("listsContainer");
-    let listType = document.getElementById("list_type").value;
-    let newList = document.createElement(listType);
+    let listType = document.getElementById("list_type");
+    let newList = document.createElement(listType.value);
     newList.className = "todoList";
+    let selected = listType.selectedIndex;
+    let options = document.querySelectorAll("select option");
+    if (options[selected].text == "simple list") newList.classList.add("noStyle");
 
     listsContainer.appendChild(newList);
     todoLists = document.getElementsByClassName("todoList");
@@ -172,11 +175,11 @@ let liClickHandler = (e) => {
     else if (span.innerHTML == "check_circle_outline") {
         li.style.color = "#BBB";
         span.innerHTML = "check_circle";
-        span.style.color = "lime";
+        span.style.color = "#0D0";
     }
     else {
         li.style.color = "#000";
         span.innerHTML = "check_circle_outline";
-        span.style.color = "black";
+        span.style.color = "#000";
     }
 }

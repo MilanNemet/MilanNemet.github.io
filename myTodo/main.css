@@ -57,6 +57,9 @@ li > ins {
 .inactive {
     box-shadow: 0 0 1px 1px #666;
 }
+.noStyle {
+    list-style-type: none;
+}
 
 .pagination {
     margin-top: 10px;
