@@ -1,10 +1,18 @@
-﻿div {
+﻿html {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-color: #2A4B7C;
+    background-image: linear-gradient(to bottom right, #009B77, #00539C);
+    background-repeat: no-repeat;
+}
+div {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10%;
 }
 .container {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     max-width: 800px;
     margin: auto;
@@ -74,6 +82,7 @@ ins {
     display: inline-block;
 }
 ins span {
+    color: white;
     margin-left: 5px;
     cursor: pointer;
 }

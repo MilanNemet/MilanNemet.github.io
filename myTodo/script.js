@@ -181,14 +181,14 @@ let liClickHandler = (e) => {
         li.remove();
     }
     else if (span.innerHTML == "check_circle_outline") {
-        li.style.color = "#BBB";
+        li.style.color = "rgba(255,255,255,0.2)";
         span.innerHTML = "check_circle";
-        span.style.color = "#0D0";
+        //span.style.color = "#0D0";
     }
     else {
-        li.style.color = "#000";
+        li.style.color = "rgba(255,255,255,1)";
         span.innerHTML = "check_circle_outline";
-        span.style.color = "#000";
+        //span.style.color = "#FFF";
     }
 }
 
@@ -197,6 +197,6 @@ let renderPage = (phase) => {
         $(":not(input).animable").fadeIn(800);
     }
     else {
-        $("input.animable").slideDown(700);
+        $("input.animable").slideDown(600);
     }
 }
