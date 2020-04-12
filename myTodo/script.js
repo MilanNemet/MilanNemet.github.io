@@ -5,8 +5,8 @@ let renderTwice = [];
 let globalIndex = 0;
 
 window.onload = function () {
-    this.setTimeout(() => renderPage(true), 200);
-    this.setTimeout(() => renderPage(false), 800);
+    this.setTimeout(() => renderPage(true), 300);
+    this.setTimeout(() => renderPage(false), 1100);
     initSubmits();
     initTextBox();
 }
@@ -194,9 +194,9 @@ let liClickHandler = (e) => {
 
 let renderPage = (phase) => {
     if (phase) {
-        $(":not(input).animable").fadeIn("slow");
+        $(":not(input).animable").fadeIn(800);
     }
     else {
-        $("input.animable").slideDown("slow");
+        $("input.animable").slideDown(700);
     }
 }
