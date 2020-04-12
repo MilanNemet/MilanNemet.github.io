@@ -36,12 +36,6 @@ li {
     position: relative;
     max-width: 80%;
 }
-li::before {
-    content: '\00a0';
-}
-li::after {
-    content: '\00a0';
-}
 li > ins {
     color: black;
 }
