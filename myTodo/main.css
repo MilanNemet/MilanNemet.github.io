@@ -54,9 +54,13 @@ li > ins {
 }
 
 .error {
-    margin: 0 0 0 20px;
-    color: #FF2222;
+    width: 100%;
+    margin: 0;
+    color: pink;
     visibility: hidden;
+    order: 100;
+    align-self: flex-end;
+    text-align: right;
 }
 .active {
     box-shadow: 0 0 5px 3px skyblue;

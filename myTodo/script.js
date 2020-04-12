@@ -34,14 +34,12 @@ let initTextBox = () => {
 }
 
 let setStyleDown = (e) => {
-    //e.target.style.color = "#FFF";
+    e.target.style.textShadow = "none";
     e.target.style.backgroundColor = "rgba(0,0,0,0)";
-    //e.target.style.fontWeight = "bold";
 }
 let setStyleUpOrOut = (e) => {
-    //e.target.style.color = "#00539C";
+    e.target.style.textShadow = "0 0 2px #004B8D, 0 0 3px #004B8D, 0 0 4px #004B8D";
     e.target.style.backgroundColor = "#FFF";
-    //e.target.style.fontWeight = "normal";
 }
 
 let insertNewList = () => {
