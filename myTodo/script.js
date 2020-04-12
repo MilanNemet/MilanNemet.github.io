@@ -1,6 +1,12 @@
 console.debug("Starting script...");
 
+let renderOnce = [];
+let renderTwice = [];
+let globalIndex = 0;
+
 window.onload = function () {
+    this.setTimeout(() => renderPage(true), 200);
+    this.setTimeout(() => renderPage(false), 800);
     initSubmits();
     initTextBox();
 }
@@ -84,6 +90,7 @@ let insertNewListItem = (e) => {
 
     if (input.value.length > 0) {
         let li = document.createElement("li");
+        li.style.display = "none";
         let textNode = document.createTextNode(input.value);
         li.appendChild(textNode);
 
@@ -104,6 +111,7 @@ let insertNewListItem = (e) => {
         li.appendChild(ins);
 
         todoLists[listIndex - 1].appendChild(li);
+        $("li:last-child").fadeIn("slow");
         input.value = "";
     }
     else {
@@ -181,5 +189,14 @@ let liClickHandler = (e) => {
         li.style.color = "#000";
         span.innerHTML = "check_circle_outline";
         span.style.color = "#000";
+    }
+}
+
+let renderPage = (phase) => {
+    if (phase) {
+        $(":not(input).animable").fadeIn("slow");
+    }
+    else {
+        $("input.animable").slideDown("slow");
     }
 }

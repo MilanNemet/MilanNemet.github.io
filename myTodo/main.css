@@ -83,3 +83,7 @@ ins span {
     margin-left: 5px;
     cursor: pointer;
 }
+
+.animable {
+    display: none;
+}
