@@ -34,12 +34,14 @@ let initTextBox = () => {
 }
 
 let setStyleDown = (e) => {
-    e.target.style.backgroundColor = "#EEE";
-    e.target.style.boxShadow = "0 0 1px 1px inset #666";
+    //e.target.style.color = "#FFF";
+    e.target.style.backgroundColor = "rgba(0,0,0,0)";
+    //e.target.style.fontWeight = "bold";
 }
 let setStyleUpOrOut = (e) => {
-    e.target.style.backgroundColor = "white";
-    e.target.style.boxShadow = "0 0 1px 1px #666";
+    //e.target.style.color = "#00539C";
+    e.target.style.backgroundColor = "#FFF";
+    //e.target.style.fontWeight = "normal";
 }
 
 let insertNewList = () => {
@@ -183,12 +185,10 @@ let liClickHandler = (e) => {
     else if (span.innerHTML == "check_circle_outline") {
         li.style.color = "rgba(255,255,255,0.2)";
         span.innerHTML = "check_circle";
-        //span.style.color = "#0D0";
     }
     else {
         li.style.color = "rgba(255,255,255,1)";
         span.innerHTML = "check_circle_outline";
-        //span.style.color = "#FFF";
     }
 }
 

@@ -1,4 +1,8 @@
-﻿html {
+﻿* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+html {
     width: 100vw;
     height: 100vh;
     color: white;
@@ -12,7 +16,6 @@ div {
     padding: 0 10%;
 }
 .container {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 100%;
     max-width: 800px;
     margin: auto;
@@ -21,12 +24,14 @@ div {
     flex-wrap: nowrap;
 }
 input, select {
+    color: white;
+    text-shadow: 0 0 2px #004B8D, 0 0 3px #004B8D, 0 0 4px #004B8D;
     font-size: 1em;
     margin: 5px;
     padding: 5px 10px;
-    border: 1px solid #666;
+    border: 2px solid #FFF;
     border-radius: 5px;
-    box-shadow: 0 0 1px 1px #666;
+    box-shadow: none;
     display: inline-block;
     max-width: 95%;
 }
@@ -67,9 +72,11 @@ li > ins {
     margin-top: 10px;
     text-align: center;
 }
+.pagination > * {
+    font-weight: bold;
+}
 .pagination > span {
     font-size: 2em;
-    font-weight: bold;
     margin: 0;
     padding: 5px;
     vertical-align: top;
