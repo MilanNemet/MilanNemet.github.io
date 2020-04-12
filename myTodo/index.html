@@ -12,13 +12,13 @@
     <div class="container">
         <h1>My Simple TODO list</h1>
         <div>
-                <select id="list_type" name="list_type">
-                    <option value="ul" selected>simple list</option>
-                    <option value="ul">bullet list</option>
-                    <option value="ol">numbered list</option>
-                </select>
-                <input type="submit" value="Create new list" id="ButtonNewList">
-                <input type="submit" value="Delete list" id="ButtonDeleteList">
+            <select id="list_type" name="list_type">
+                <option value="ul" selected>simple list</option>
+                <option value="ul">bullet list</option>
+                <option value="ol">numbered list</option>
+            </select>
+            <input type="submit" value="Create new list" id="ButtonNewList">
+            <input type="submit" value="Delete list" id="ButtonDeleteList">
         </div>
         <p style="width: 100%; border-bottom: 1px solid black;"></p>
         <div style="justify-content: end;">
@@ -29,11 +29,11 @@
         <p class="error">&nbsp;</p>
 
         <nav class="pagination">
-            <input type="submit" value="<<" id="todoListFirst" >
-            <input type="submit" value="<" id="todoListPrev" >
+            <input type="submit" value="<<" id="todoListFirst">
+            <input type="submit" value="<" id="todoListPrev">
             <span id="indexer">1</span>
-            <input type="submit" value=">" id="todoListNext" >
-            <input type="submit" value=">>" id="todoListLast" >
+            <input type="submit" value=">" id="todoListNext">
+            <input type="submit" value=">>" id="todoListLast">
         </nav>
 
         <h2>Todos:</h2>
@@ -43,9 +43,7 @@
         </main>
 
     </div>
-
-
-
-        <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
