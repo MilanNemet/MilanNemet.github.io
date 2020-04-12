@@ -24,19 +24,18 @@ div {
     flex-wrap: nowrap;
 }
 input, select {
-    color: white;
-    text-shadow: 0 0 2px #004B8D, 0 0 3px #004B8D, 0 0 4px #004B8D;
     font-size: 1em;
     margin: 5px;
     padding: 5px 10px;
     border: 2px solid #FFF;
-    border-radius: 5px;
-    box-shadow: none;
     display: inline-block;
     max-width: 95%;
 }
-input[type=submit] {
-    background-color: white;
+input, select, option { 
+    color: white;
+    background-color: rgba(0,0,0,0);
+    box-shadow: 1px 1px 1px 1px #444, 1px 1px 1px 1px #444 inset;
+    text-shadow: 2px 2px 1px #444, 2px 2px 2px #444;
 }
 
 ul, ol {

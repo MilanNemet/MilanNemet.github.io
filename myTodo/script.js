@@ -34,12 +34,12 @@ let initTextBox = () => {
 }
 
 let setStyleDown = (e) => {
-    e.target.style.textShadow = "none";
-    e.target.style.backgroundColor = "rgba(0,0,0,0)";
-}
-let setStyleUpOrOut = (e) => {
     e.target.style.textShadow = "0 0 2px #004B8D, 0 0 3px #004B8D, 0 0 4px #004B8D";
     e.target.style.backgroundColor = "#FFF";
+}
+let setStyleUpOrOut = (e) => {
+    e.target.style.textShadow = "2px 2px 1px #444, 2px 2px 2px #444";
+    e.target.style.backgroundColor = "rgba(0,0,0,0)";
 }
 
 let insertNewList = () => {
@@ -60,8 +60,10 @@ let insertNewList = () => {
         todoLists[i].style.display = "none";
     }
     indexerElement.innerHTML = todoLists.length;
+    document.getElementById("todoText").focus();
 }
 let deleteList = () => {
+    document.getElementById("todoText").focus();
     let indexerElement = document.getElementById("indexer");
     let index = parseInt(indexerElement.innerHTML) - 1;
     let todoLists = document.getElementsByClassName("todoList");
@@ -119,15 +121,13 @@ let insertNewListItem = (e) => {
     }
     input.focus();
 }
-let removeListItem = (e) => {
-
-}
 let resetList = () => {
     let answer = confirm("All these list-items will be deleted permanently!\nDo you want to continue?");
     let i = parseInt(document.getElementById("indexer").innerHTML)-1;
     if (answer) {
         document.getElementsByClassName("todoList")[i].innerHTML = '';
     }
+    document.getElementById("todoText").focus();
 }
 
 let handlePaging = (e) => {
