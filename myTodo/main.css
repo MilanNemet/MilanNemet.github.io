@@ -7,7 +7,7 @@ html {
     height: 100vh;
     color: white;
     background-color: #2A4B7C;
-    background-image: linear-gradient(to bottom right, #009B77, #00539C);
+    background-image: linear-gradient(to bottom right, #009B77, #00539C, #122A4E);
     background-repeat: no-repeat;
 }
 div {
