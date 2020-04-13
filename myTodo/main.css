@@ -31,11 +31,11 @@ input, select {
     display: inline-block;
     max-width: 95%;
 }
-input, select, option { 
-    color: white;
-    background-color: rgba(0,0,0,0);
-    box-shadow: 1px 1px 1px 1px #444, 1px 1px 1px 1px #444 inset;
-    text-shadow: 2px 2px 1px #444, 2px 2px 2px #444;
+input, select, select option { 
+    color: white !important;
+    background-color: rgba(0,0,0,0) !important;
+    box-shadow: 1px 1px 1px 1px #444, 1px 1px 1px 1px #444 inset !important;
+    text-shadow: 2px 2px 1px #444, 2px 2px 2px #444 !important;
 }
 
 ul, ol {
