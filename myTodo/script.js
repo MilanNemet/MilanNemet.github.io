@@ -119,7 +119,7 @@ let insertNewListItem = (e) => {
 }
 let resetList = () => {
     let answer = confirm("All these list-items will be deleted permanently!\nDo you want to continue?");
-    let i = parseInt(document.getElementById("indexer").innerHTML)-1;
+    let i = parseInt(document.getElementById("indexer").innerHTML) - 1;
     if (answer) {
         document.getElementsByClassName("todoList")[i].innerHTML = '';
     }
