@@ -1,9 +1,5 @@
 console.debug("Starting script...");
 
-let renderOnce = [];
-let renderTwice = [];
-let globalIndex = 0;
-
 window.onload = function () {
     this.setTimeout(() => renderPage(true), 300);
     this.setTimeout(() => renderPage(false), 1100);
